@@ -12,7 +12,7 @@ const Wrapper = styled.footer`
 
 const List = styled.ul`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
