@@ -63,6 +63,11 @@ const Menu = () => {
           </Link>
         </li>
         <li>
+          <Link to="/priser/" activeStyle={activeLinkStyle}>
+            Priser
+          </Link>
+        </li>
+        <li>
           <Link to="/bokning/" activeStyle={activeLinkStyle}>
             Boka rum
           </Link>

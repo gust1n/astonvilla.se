@@ -75,8 +75,18 @@ injectGlobal`
   }
 
   table {
+    margin: 0 auto;
     border-collapse: collapse;
     border-spacing: 0;
+
+    th, td {
+      padding: 4px 6px;
+      border: 1px solid #ccc;
+    }
+    th {
+      background-color: #eee;
+      font-weight: 600;
+    }
   }
 
   * {
