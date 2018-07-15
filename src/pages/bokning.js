@@ -5,6 +5,14 @@ import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
 import SEO from '../components/SEO'
 
+import styled from 'styled-components'
+
+const BookingForm = styled.div`
+  .sbw-loader {
+    width: 20px;
+  }
+`
+
 export default class Contact extends React.Component {
   componentDidMount () {
     const script = document.createElement("script");
@@ -30,7 +38,7 @@ export default class Contact extends React.Component {
 
         <Container>
           <PageTitle small>Skicka din bokningsförfrågan här</PageTitle>
-          <div id="booking-form" />
+          <BookingForm id="booking-form" />
         </Container>
       </div>
     )

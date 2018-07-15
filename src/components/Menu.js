@@ -63,7 +63,7 @@ const Menu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/contact/" activeStyle={activeLinkStyle}>
+          <Link to="/bokning/" activeStyle={activeLinkStyle}>
             Boka rum
           </Link>
         </li>
