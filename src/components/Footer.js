@@ -31,9 +31,8 @@ const Item = styled.li`
     width: auto;
   }
   a {
-    font-weight: 600;
     transition: all 0.2s;
-    color: ${props => props.theme.colors.base};
+    color: #999;
     &:hover {
       color: ${props => props.theme.colors.highlight};
     }
@@ -56,7 +55,7 @@ const Footer = () => (
         <span>Tel +46 31 41 41 40</span>
       </Item>
       <Item>
-        <span>info@astonvilla.se</span>
+        <span><a href="mailto:info@astonvilla.se">info@astonvilla.se</a></span>
       </Item>
     </List>
   </Wrapper>
