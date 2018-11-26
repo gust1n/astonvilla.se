@@ -3,11 +3,14 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
+import PageBody from '../components/PageBody'
 import SEO from '../components/SEO'
 
 import styled from 'styled-components'
 
 const BookingForm = styled.div`
+  margin-bottom: 2em;
+
   .sbw-loader {
     width: 20px;
   }
@@ -29,6 +32,8 @@ export default class Contact extends React.Component {
       title: `Boka prisvärda gästrum - ${config.siteTitle}`,
     }
 
+    const { body } = this.props.data.contentfulPage;
+
     return (
       <div>
         <Helmet>
@@ -39,8 +44,28 @@ export default class Contact extends React.Component {
         <Container>
           <PageTitle small>Skicka din bokningsförfrågan här</PageTitle>
           <BookingForm id="booking-form" />
+          <PageBody body={body} />
         </Container>
       </div>
     )
   }
 }
+
+export const query = graphql`
+  query bookingQuery {
+    contentfulPage(slug: { eq: "bokning" }) {
+      title
+      slug
+      metaDescription {
+        internal {
+          content
+        }
+      }
+      body {
+        childMarkdownRemark {
+          html
+        }
+      }
+    }
+  }
+`
