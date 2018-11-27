@@ -20,7 +20,7 @@ export default class Contact extends React.Component {
   componentDidMount () {
     const script = document.createElement("script");
 
-    script.setAttribute("data-form-id", "5ae97af62946e");
+    script.setAttribute("data-form-id", "5bf3c7f9a1051");
     script.src = "https://secured.sirvoy.com/widget/sirvoy.js";
     script.async = true;
 
